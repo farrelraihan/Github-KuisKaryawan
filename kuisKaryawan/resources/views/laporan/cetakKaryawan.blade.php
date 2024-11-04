@@ -20,7 +20,7 @@
     </style>
 </head>
 <body>
-    <h2>Laporan Pengguna</h2>
+    <h2>Laporan Karyawan</h2>
     <table>
         <thead>
             <tr>

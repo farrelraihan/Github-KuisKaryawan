@@ -21,7 +21,7 @@ class ListKaryawanProyeks extends ListRecords
             ->action(fn() => static::cetakLaporan()) // A99
             ->requiresConfirmation()
             ->modalHeading('Cetak Laporan KarPro')
-            ->modalSubheading('Apakah Anda yakin ingin mencetak laporan?'),
+            ->modalSubheading('Apakah Anda yakin ingin mencetak laporan KarPro?'),
         ];
     }
 
@@ -32,7 +32,7 @@ class ListKaryawanProyeks extends ListRecords
         // Load view untuk cetak PDF
         $pdf = \PDF::loadView('laporan.cetak', ['data' => $data]);
         // Unduh file PDF
-        return response()->streamDownload(fn() => print($pdf->output()), 'laporan-pengguna.pdf');
+        return response()->streamDownload(fn() => print($pdf->output()), 'laporan-karpro.pdf');
     }
 
 }
